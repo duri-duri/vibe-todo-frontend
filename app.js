@@ -1,5 +1,7 @@
 // 백엔드 API 주소 ( .env 의 API_BASE → node generate-config.js 로 config.js 생성 후 사용 )
-const API_BASE = (typeof window !== 'undefined' && window.__ENV && window.__ENV.API_BASE) || 'http://localhost:5000';
+const API_BASE =
+  (typeof window !== 'undefined' && window.__ENV && window.__ENV.API_BASE)
+  || 'https://vibe-todo-api.herokuapp.com';
 
 console.log("[APP_FINGERPRINT]", "JS_PATH:", "C:\\Users\\admin\\Desktop\\vibe-coding\\todo\\todo-firebase\\app.js", "TIME:", new Date().toISOString());
 console.log("[APP_FINGERPRINT]", "location.href:", location.href);
