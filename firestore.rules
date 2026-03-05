@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 할일 목록: 테스트용으로 읽기/쓰기 허용 (배포 시 인증 규칙으로 교체 권장)
+    match /todos/{todoId} {
+      allow read, write: if true;
+    }
+  }
+}
