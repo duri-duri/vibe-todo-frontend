@@ -1,6 +1,6 @@
 // 백엔드 API 주소 ( .env 의 API_BASE → node generate-config.js 로 config.js 생성 후 사용 )
 const API_BASE =
-  (typeof window !== "undefined" && window.__ENV?.API_BASE) || "";
+  (typeof window !== "undefined" && window.__ENV && window.__ENV.API_BASE) || "";
 
 if (!API_BASE) throw new Error("API_BASE missing");
 
